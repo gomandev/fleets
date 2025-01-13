@@ -13,6 +13,7 @@ import {AddDriverModal} from "@/app/dashboard/components/add-driver-modal";
 import {DriverList} from "@/app/dashboard/components/driver-list";
 import {useDrivers} from "@/contexts/drivers-context";
 import {DriverDisplay} from "@/app/dashboard/components/driver-display";
+import CreatAccountLayout from "./layout";
 
  enum DeliveryTypes  {
     'FOOD' = 'FOOD',
@@ -33,7 +34,7 @@ const DashboardPage:NextPage = () => {
     }, [setSelectedDriver])
 
     return (
-        <>
+        <CreatAccountLayout>
             <ResizablePanelGroup
                 direction="horizontal"
                 className="h-screen items-stretch"
@@ -76,7 +77,7 @@ const DashboardPage:NextPage = () => {
                 </ResizablePanel>
             </ResizablePanelGroup>
             <AddDriverModal open={openModal} setOpen={setOpenModal} />
-        </>
+        </CreatAccountLayout>
     );
 }
 

@@ -17,7 +17,6 @@ const nextConfig = {
     },
     experimental: {
         isrMemoryCacheSize: 0,
-        missingSuspenseWithCSRBailout: false,
     },
     webpack: (config, { isServer }) => {
         if (!isServer) {
