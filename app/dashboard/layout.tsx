@@ -4,6 +4,7 @@ import {DriversProvider} from "@/contexts/drivers-context";
 import {ProfileProvider} from "@/contexts/profile-context";
 
 import {DeliveriesProvider} from "@/contexts/deliveries-context";
+import { Suspense } from "react";
 export const metadata: Metadata = {
     title: "Dashboard - Fleet",
     description: "All-in-one logistics management platform",
@@ -65,13 +66,21 @@ const DashboardLayout: NextPage<any> = async ({ children }) => {
     //     '/api/client/organizations': ssrData.organizations ?? []
     // }
     return (
-        <>
-        
-            
+        <ProfileProvider>
+        <DriversProvider fallbackDrivers={[]} >
+            <DeliveriesProvider fallbackDeliveries={[]}>
+            <LayoutComponent
+                defaultLayout={[15, 85]}
+                defaultCollapsed={false}
+                navCollapsedSize={4}
+            >
+                <Suspense>
                 {children}
-            
-
-        </>
+                </Suspense>
+            </LayoutComponent>
+            </DeliveriesProvider>
+        </DriversProvider>
+        </ProfileProvider>
     );
 };
 
