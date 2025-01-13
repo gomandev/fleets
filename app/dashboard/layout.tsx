@@ -65,19 +65,7 @@ const DashboardLayout: NextPage<any> = async ({ children }) => {
     //     '/api/client/organizations': ssrData.organizations ?? []
     // }
     return (
-        <ProfileProvider>
-        <DriversProvider fallbackDrivers={[]} >
-            <DeliveriesProvider fallbackDeliveries={[]}>
-            <LayoutComponent
-                defaultLayout={[15, 85]}
-                defaultCollapsed={false}
-                navCollapsedSize={4}
-            >
-                {children}
-            </LayoutComponent>
-            </DeliveriesProvider>
-        </DriversProvider>
-        </ProfileProvider>
+        <h1></h1>
     );
 };
 
