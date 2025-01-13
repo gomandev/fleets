@@ -67,10 +67,9 @@ const DashboardLayout: NextPage<any> = async ({ children }) => {
     return (
         <ProfileProvider>
         <DriversProvider fallbackDrivers={[]} >
-            <DeliveriesProvider fallbackDeliveries={[]}>
             
                 {children}
-            </DeliveriesProvider>
+            
         </DriversProvider>
         </ProfileProvider>
     );
