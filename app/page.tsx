@@ -1,10 +1,10 @@
 import {ArrowRight, BarChart3, Check, Search, Users} from "lucide-react";
-import Header from "@/app/dashboard/components/header";
+// import Header from "@/app/dashboard/components/header";
 
 export default function Home() {
   return (
       <div className="flex flex-col">
-        <Header />
+        {/* <Header /> */}
         <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center lg:py-40">
           <div className="relative z-10 mx-auto max-w-5xl">
             <h1 className="animate-fade-up text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
