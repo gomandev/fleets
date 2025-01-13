@@ -65,13 +65,13 @@ const DashboardLayout: NextPage<any> = async ({ children }) => {
     //     '/api/client/organizations': ssrData.organizations ?? []
     // }
     return (
-        <ProfileProvider>
+        <>
         
             
                 {children}
             
 
-        </ProfileProvider>
+        </>
     );
 };
 
