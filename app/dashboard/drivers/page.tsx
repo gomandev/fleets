@@ -5,7 +5,7 @@ import {cn} from "@/lib/utils";
 import {ResizableHandle, ResizablePanel, ResizablePanelGroup} from "@/components/ui/resizable";
 import {Separator} from "@/components/ui/separator";
 import {Select, SelectTrigger, SelectItem, SelectValue, SelectGroup, SelectContent} from "@/components/ui/select";
-import {useState, useCallback} from "react";
+// import {useState, useCallback} from "react";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 import {Button} from "@/components/ui/button";
 import {Plus} from "lucide-react";
@@ -21,16 +21,16 @@ import {DriverDisplay} from "@/app/dashboard/components/driver-display";
     'ALL' = 'ALL'
 }
 const DashboardPage:NextPage = () => {
-    const [openModal, setOpenModal] = useState(false)
+    // const [openModal, setOpenModal] = useState(false)
     const {drivers, selectedDriver, setSelectedDriver} = useDrivers()
 
-    const handleOpen = useCallback(() => {
-        setOpenModal(prev => !prev)
-    }, [])
+    // const handleOpen = useCallback(() => {
+    //     setOpenModal(prev => !prev)
+    // }, [])
 
-    const handleDriverSelect = useCallback((driver: any) => {
-        setSelectedDriver(driver)
-    }, [setSelectedDriver])
+    // const handleDriverSelect = useCallback((driver: any) => {
+    //     setSelectedDriver(driver)
+    // }, [setSelectedDriver])
 
     return (
         <>
@@ -51,21 +51,21 @@ const DashboardPage:NextPage = () => {
                             <div className="flex items-center justify-between gap-2">
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <Button onClick={handleOpen} variant="outline" size="sm" className="text-xs">
+                                        {/* <Button onClick={handleOpen} variant="outline" size="sm" className="text-xs">
                                             Create Driver
                                             <Plus className="ml-1 h-4 w-4" />
-                                        </Button>
+                                        </Button> */}
                                     </TooltipTrigger>
                                     <TooltipContent>Create a new driver</TooltipContent>
                                 </Tooltip>
                             </div>
                         </div>
                         <Separator />
-                        <DriverList
+                        {/* <DriverList
                             setSelectedDriver={handleDriverSelect}
                             items={drivers}
                             selectedDriver={selectedDriver}
-                        />
+                        /> */}
                     </div>
                 </ResizablePanel>
                 <ResizableHandle withHandle={false} />
@@ -75,7 +75,7 @@ const DashboardPage:NextPage = () => {
                     />
                 </ResizablePanel>
             </ResizablePanelGroup>
-            <AddDriverModal open={openModal} setOpen={setOpenModal} />
+            {/* <AddDriverModal open={openModal} setOpen={setOpenModal} /> */}
         </>
     );
 }
