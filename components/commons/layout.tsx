@@ -13,7 +13,7 @@ import {Separator} from "@/components/ui/separator";
 import {NavBar} from "@/components/commons/nav";
 import {AccountSwitcher} from "@/components/commons/setting/icon";
 import {useProfile} from "@/contexts/profile-context";
-// import {ApprovalOverlay} from "@/app/dashboard/components/account-approval";
+import {ApprovalOverlay} from "@/app/dashboard/components/account-approval";
 
 interface LayoutProps {
     defaultLayout: [number, number];
@@ -104,9 +104,9 @@ export function LayoutComponent({
                     </Card>
                 </div>
             </div>
-            {/* {profile !== undefined && !profile?.organization?.accountApproved && (
+            {profile !== undefined && !profile?.organization?.accountApproved && (
                 <ApprovalOverlay />
-            )} */}
+            )}
         </TooltipProvider>
     );
 }
