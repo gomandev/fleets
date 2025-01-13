@@ -1,7 +1,5 @@
-import { NextPage } from "next/types";
-import DriversPageLayout from "./layout";
 
-const DashboardPage:NextPage = () => {
+const DashboardPage = () => {
    
     return (
         <>
