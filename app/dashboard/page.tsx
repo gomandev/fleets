@@ -17,14 +17,14 @@ import {useDelivery} from "@/contexts/deliveries-context";
 }
 export default function DashboardPage() {
     const [viewTypes, setViewType] = useState<DeliveryTypes>(DeliveryTypes.ALL)
-    const {deliveries, selectedDelivery, setSelectedDelivery, hasExistingDeliverySelected
-    } = useDelivery()
+    // const {deliveries, selectedDelivery, setSelectedDelivery, hasExistingDeliverySelected
+    // } = useDelivery()
 
-    useEffect(() => {
-        if(!selectedDelivery) {
-            setSelectedDelivery(deliveries[0])
-        }
-    }, [hasExistingDeliverySelected, selectedDelivery, deliveries])
+    // useEffect(() => {
+    //     if(!selectedDelivery) {
+    //         setSelectedDelivery(deliveries[0])
+    //     }
+    // }, [hasExistingDeliverySelected, selectedDelivery, deliveries])
 
     return (
         <>
@@ -70,21 +70,21 @@ export default function DashboardPage() {
                             </div>
                         </div>
                         <Separator />
-                        <DeliveryList
+                        {/* <DeliveryList
                             items={deliveries}
                             selectedDelivery={selectedDelivery}
                             setSelectedDelivery={setSelectedDelivery}
-                        />
+                        /> */}
                     </div>
                 </ResizablePanel>
                 <ResizableHandle withHandle={false} />
-                <ResizablePanel collapsible={false} defaultSize={60} minSize={60}>
+                {/* <ResizablePanel collapsible={false} defaultSize={60} minSize={60}>
                     {selectedDelivery && (
                         <DeliveryDisplay
                             selectedDelivery={selectedDelivery}
                         />
                     )}
-                </ResizablePanel>
+                </ResizablePanel> */}
             </ResizablePanelGroup>
         </>
     );
