@@ -15,7 +15,7 @@ import {useDelivery} from "@/contexts/deliveries-context";
     'PARCEL' = 'PARCEL',
     'ALL' = 'ALL'
 }
-const DashboardPage:NextPage = () => {
+export default function DashboardPage() {
     const [viewTypes, setViewType] = useState<DeliveryTypes>(DeliveryTypes.ALL)
     const {deliveries, selectedDelivery, setSelectedDelivery, hasExistingDeliverySelected
     } = useDelivery()
@@ -89,5 +89,3 @@ const DashboardPage:NextPage = () => {
         </>
     );
 }
-
-export default DashboardPage

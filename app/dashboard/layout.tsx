@@ -4,6 +4,7 @@ import {DriversProvider} from "@/contexts/drivers-context";
 import {ProfileProvider} from "@/contexts/profile-context";
 
 import {DeliveriesProvider} from "@/contexts/deliveries-context";
+import { PropsWithChildren } from "react";
 export const metadata: Metadata = {
     title: "Dashboard - Fleet",
     description: "All-in-one logistics management platform",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
 //     }
 // }
 
-const DashboardLayout: NextPage<any> = async ({ children }) => {
+export default function DashboardLayout (props: PropsWithChildren<{}>) {
     // const ssrData = await getInitialData()
     // const  fallback = {
     //     '/api/team/get-team': ssrData?.team ?? undefined,
@@ -73,12 +74,10 @@ const DashboardLayout: NextPage<any> = async ({ children }) => {
                 defaultCollapsed={false}
                 navCollapsedSize={4}
             >
-                {children}
+                {props.children}
             </LayoutComponent>
             </DeliveriesProvider>
         </DriversProvider>
         </ProfileProvider>
     );
 };
-
-export default DashboardLayout
