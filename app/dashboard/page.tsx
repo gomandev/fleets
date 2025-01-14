@@ -20,11 +20,9 @@ export default function DashboardPage() {
     // const {deliveries, selectedDelivery, setSelectedDelivery, hasExistingDeliverySelected
     // } = useDelivery()
 
-    // useEffect(() => {
-    //     if(!selectedDelivery) {
-    //         setSelectedDelivery(deliveries[0])
-    //     }
-    // }, [hasExistingDeliverySelected, selectedDelivery, deliveries])
+    useEffect(() => {
+       console.log("hello")
+    }, [])
 
     return (
         <>
