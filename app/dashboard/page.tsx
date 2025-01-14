@@ -17,12 +17,14 @@ import {useDelivery} from "@/contexts/deliveries-context";
 }
 export default function DashboardPage() {
     const [viewTypes, setViewType] = useState<DeliveryTypes>(DeliveryTypes.ALL)
-    // const {deliveries, selectedDelivery, setSelectedDelivery, hasExistingDeliverySelected
-    // } = useDelivery()
+    const {deliveries, selectedDelivery, setSelectedDelivery, hasExistingDeliverySelected
+    } = useDelivery()
 
     useEffect(() => {
-       console.log("hello")
-    }, [])
+        if(!selectedDelivery) {
+            setSelectedDelivery(deliveries[0])
+        }
+    }, [hasExistingDeliverySelected, selectedDelivery, deliveries])
 
     return (
         <>
