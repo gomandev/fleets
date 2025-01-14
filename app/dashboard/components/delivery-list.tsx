@@ -10,7 +10,7 @@ interface DeliveryListProps {
     items: DeliveryI[];
     selectedDelivery?: DeliveryI;
     setSelectedDelivery: (delivery: DeliveryI) => void;
-}
+} 
 
 export function DeliveryList({
                                items,
