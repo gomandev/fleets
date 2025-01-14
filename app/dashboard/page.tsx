@@ -78,13 +78,13 @@ export default function DashboardPage() {
                     </div>
                 </ResizablePanel>
                 <ResizableHandle withHandle={false} />
-                {/* <ResizablePanel collapsible={false} defaultSize={60} minSize={60}>
+                <ResizablePanel collapsible={false} defaultSize={60} minSize={60}>
                     {selectedDelivery && (
                         <DeliveryDisplay
                             selectedDelivery={selectedDelivery}
                         />
                     )}
-                </ResizablePanel> */}
+                </ResizablePanel>
             </ResizablePanelGroup>
         </>
     );
