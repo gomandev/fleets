@@ -1,5 +1,3 @@
-"use client";
-
 import {Metadata, NextPage} from "next";
 import {LayoutComponent} from "@/components/commons/layout";
 import {DriversProvider} from "@/contexts/drivers-context";
