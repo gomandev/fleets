@@ -1,8 +1,9 @@
 "use client";
 import React from 'react';
+import dynamic from 'next/dynamic';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Home } from "lucide-react";
-import Lottie from "react-lottie";
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 import * as PendingAnimationData from "@/app/lotties/pending.json";
 
 export const ApprovalOverlay= () => {
