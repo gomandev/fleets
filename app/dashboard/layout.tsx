@@ -74,7 +74,7 @@ export default function DashboardLayout (props: PropsWithChildren<{}>) {
                 defaultCollapsed={false}
                 navCollapsedSize={4}
             >
-                {props.children}
+                <h1>Hrllo</h1>
             </LayoutComponent>
             </DeliveriesProvider>
         </DriversProvider>
