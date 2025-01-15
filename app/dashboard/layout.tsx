@@ -69,7 +69,7 @@ export default function DashboardLayout (props: PropsWithChildren<{}>) {
         <ProfileProvider>
         <DriversProvider fallbackDrivers={[]} >
             <DeliveriesProvider fallbackDeliveries={[]}>
-            <h1>Hello</h1>
+            {props.children}
             </DeliveriesProvider>
         </DriversProvider>
         </ProfileProvider>
