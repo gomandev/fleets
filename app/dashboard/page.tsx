@@ -1,4 +1,5 @@
 "use client";
+
 import {NextPage} from "next";
 import {cn} from "@/lib/utils";
 import {ResizableHandle, ResizablePanel, ResizablePanelGroup} from "@/components/ui/resizable";

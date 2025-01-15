@@ -1,6 +1,5 @@
+"use client";
 
-
-"use client"
 import React, {createContext, PropsWithChildren, useContext, useEffect, useState} from "react";
 import {DeliveryI} from '@nanahq/sticky'
 import useSWR, {Fetcher} from "swr";
