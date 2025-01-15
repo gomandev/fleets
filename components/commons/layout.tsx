@@ -40,7 +40,7 @@ export function LayoutComponent({
 
     return (
         <TooltipProvider delayDuration={0}>
-                {/* <ResizablePanelGroup
+                <ResizablePanelGroup
                     direction="horizontal"
                     className="h-screen  overflow-hidden items-stretch"
                 >
@@ -89,10 +89,10 @@ export function LayoutComponent({
                         />
                     </ResizablePanel>
                     <ResizableHandle withHandle={false} />
-                    <ResizablePanel defaultSize={96} minSize={96}>
+                    {/* <ResizablePanel defaultSize={96} minSize={96}>
                         {children}
-                    </ResizablePanel>
-                </ResizablePanelGroup> */}
+                    </ResizablePanel> */}
+                </ResizablePanelGroup>
             <div className="block md:hidden">
                 <div className=" flex flex-col h-screen w-screen justify-center item-center p-4">
                     <Card>
