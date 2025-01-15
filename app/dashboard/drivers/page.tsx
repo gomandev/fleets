@@ -49,7 +49,7 @@ const DashboardPage:NextPage = () => {
                         <div className="flex text-xs lg:text-base items-center justify-between px-4 py-2.5">
                             <h1 className="hidden xl:block text-xl font-bold">Manage Drivers</h1>
                             <div className="flex items-center justify-between gap-2">
-                                {/* <Tooltip>
+                                <Tooltip>
                                     <TooltipTrigger asChild>
                                         <Button onClick={handleOpen} variant="outline" size="sm" className="text-xs">
                                             Create Driver
@@ -57,15 +57,15 @@ const DashboardPage:NextPage = () => {
                                         </Button>
                                     </TooltipTrigger>
                                     <TooltipContent>Create a new driver</TooltipContent>
-                                </Tooltip> */}
+                                </Tooltip>
                             </div>
                         </div>
                         <Separator />
-                        {/* <DriverList
+                        <DriverList
                             setSelectedDriver={handleDriverSelect}
                             items={drivers}
                             selectedDriver={selectedDriver}
-                        /> */}
+                        />
                     </div>
                 </ResizablePanel>
                 <ResizableHandle withHandle={false} />
