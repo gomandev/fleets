@@ -39,7 +39,7 @@ export function LayoutComponent({
 
 
     return (
-        <>
+        <TooltipProvider delayDuration={0}>
                 <ResizablePanelGroup
                     direction="horizontal"
                     className="h-screen  overflow-hidden items-stretch"
@@ -104,9 +104,7 @@ export function LayoutComponent({
                     </Card>
                 </div>
             </div>
-            {profile !== undefined && !profile?.organization?.accountApproved && (
-                <ApprovalOverlay />
-            )}
-        </>
+           
+        </TooltipProvider>
     );
 }
