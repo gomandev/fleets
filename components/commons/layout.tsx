@@ -39,6 +39,74 @@ export function LayoutComponent({
 
 
     return (
-        <div>{children}</div>
+        <TooltipProvider delayDuration={0}>
+                <ResizablePanelGroup
+                    direction="horizontal"
+                    className="h-screen  overflow-hidden items-stretch"
+                >
+                    <ResizablePanel
+                        defaultSize={4}
+                        collapsedSize={4}
+                        collapsible={false}
+                        minSize={4}
+                        maxSize={4}
+                        className={cn(
+                            "min-w-[50px] transition-all duration-300 ease-in-out"
+                        )}
+                    >
+                        <div
+                            className={cn(
+                                "flex h-[52px] items-center justify-center"
+                            )}
+                        >
+                            <AccountSwitcher isCollapsed={true} />
+                        </div>
+                        <Separator />
+                        <NavBar
+                            isCollapsed={true}
+                            links={[
+                                {
+                                    title: "Metrics",
+                                    icon: ChartColumnBig,
+                                    path: "/dashboard/metrics",
+                                },
+                                {
+                                    title: "Deliveries",
+                                    icon: Package,
+                                    path: "/dashboard",
+                                },
+                                {
+                                    title: "Drivers",
+                                    icon: FlagTriangleRight,
+                                    path: "/dashboard/drivers",
+                                },
+                                {
+                                    title: "Heat Map",
+                                    icon: MapPinned,
+                                    path: "/dashboard/maps",
+                                },
+                            ]}
+                        />
+                    </ResizablePanel>
+                    <ResizableHandle withHandle={false} />
+                    <div>
+                        {children}
+                    </div>
+                </ResizablePanelGroup>
+            <div className="block md:hidden">
+                <div className=" flex flex-col h-screen w-screen justify-center item-center p-4">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="text-center">
+                                This page can only be viewed on Tablet and desktop
+                            </CardTitle>
+                        </CardHeader>
+                    </Card>
+                </div>
+            </div>
+            {profile !== undefined && !profile?.organization?.accountApproved && (
+                <ApprovalOverlay />
+            )}
+        </TooltipProvider>
     );
 }
