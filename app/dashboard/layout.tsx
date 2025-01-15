@@ -69,13 +69,7 @@ export default function DashboardLayout (props: PropsWithChildren<{}>) {
         <ProfileProvider>
         <DriversProvider fallbackDrivers={[]} >
             <DeliveriesProvider fallbackDeliveries={[]}>
-            <LayoutComponent
-                defaultLayout={[15, 85]}
-                defaultCollapsed={false}
-                navCollapsedSize={4}
-            >
-                <h1>Hrllo</h1>
-            </LayoutComponent>
+            <h1>Hello</h1>
             </DeliveriesProvider>
         </DriversProvider>
         </ProfileProvider>
