@@ -71,11 +71,11 @@ export default function DashboardPage() {
                             </div>
                         </div>
                         <Separator />
-                        {/* <DeliveryList
+                        <DeliveryList
                             items={deliveries}
                             selectedDelivery={selectedDelivery}
                             setSelectedDelivery={setSelectedDelivery}
-                        /> */}
+                        />
                     </div>
                 </ResizablePanel>
                 <ResizableHandle withHandle={false} />
