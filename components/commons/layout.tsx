@@ -7,7 +7,7 @@ import {ChartColumnBig, FlagTriangleRight, Home, LandPlot, MapPinned, Notebook, 
 import {cn} from "@/lib/utils";
 import {ResizableHandle, ResizablePanel, ResizablePanelGroup,} from "@/components/ui/resizable";
 
-import {TooltipProvider} from "@/components/ui/tooltip";
+import {TooltipProvider} from "@/components/ui/tooltip"; 
 import {Card, CardHeader, CardTitle} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {NavBar} from "@/components/commons/nav";
