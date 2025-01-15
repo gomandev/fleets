@@ -46,7 +46,7 @@ export const PendingLottieAnimations = () => {
 
     return (
         <div className="flex flex-col my-4 justify-center items-center">
-            {/* <Lottie options={defaultOptions} height={250} width={250} /> */}
+            <Lottie options={defaultOptions} height={250} width={250} />
         </div>
     );
 };
