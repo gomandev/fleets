@@ -104,7 +104,9 @@ export function LayoutComponent({
                     </Card>
                 </div>
             </div>
-           
+            {profile !== undefined && !profile?.organization?.accountApproved && (
+                <div />
+            )}
         </TooltipProvider>
     );
 }
