@@ -66,18 +66,6 @@ export default function DashboardLayout (props: PropsWithChildren<{}>) {
     //     '/api/client/organizations': ssrData.organizations ?? []
     // }
     return (
-        <ProfileProvider>
-        <DriversProvider fallbackDrivers={[]} >
-            <DeliveriesProvider fallbackDeliveries={[]}>
-            <LayoutComponent
-                defaultLayout={[15, 85]}
-                defaultCollapsed={false}
-                navCollapsedSize={4}
-            >
-                {props.children}
-            </LayoutComponent>
-            </DeliveriesProvider>
-        </DriversProvider>
-        </ProfileProvider>
+        <h2>hello</h2>
     );
 };
