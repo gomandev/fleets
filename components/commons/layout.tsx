@@ -105,7 +105,7 @@ export function LayoutComponent({
                 </div>
             </div>
             {profile !== undefined && !profile?.organization?.accountApproved && (
-                <div />
+                <ApprovalOverlay />
             )}
         </TooltipProvider>
     );
